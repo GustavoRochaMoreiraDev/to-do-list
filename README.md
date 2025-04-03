@@ -1,54 +1,68 @@
-# React + TypeScript + Vite
+# Todo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação simples de lista de tarefas (To-Do List) desenvolvida com **React** e **TypeScript**. Ele permite adicionar, remover e marcar tarefas como concluídas, armazenando os dados no **LocalStorage** do navegador.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📌 Adicionar novas tarefas com um título.
+- ✅ Marcar tarefas como concluídas.
+- 🗑 Remover tarefas da lista.
+- 🔍 Filtrar tarefas por status (Todas, Concluídas, Pendentes).
+- 💾 Armazenamento persistente usando LocalStorage.
 
-## Expanding the ESLint configuration
+## 🛠 Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React** com **TypeScript**
+- **CSS** para estilização
+- **LocalStorage** para persistência de dados
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🗂 Estrutura do Projeto
+```
+📂 src
+ ├── 📁 Components
+ │   ├── 📄 Todo.tsx
+ │   ├── 📄 TodoForm.tsx
+ │   ├── 📄 Filter.tsx
+ ├── 📁 Model
+ │   ├── 📄 Task.ts
+ ├── 📄 App.tsx
+ ├── 📄 App.css
+ ├── 📄 main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Como os Dados são Armazenados?
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+As tarefas são armazenadas no **LocalStorage** do navegador, garantindo que mesmo ao recarregar a página, os dados não sejam perdidos.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- Ao adicionar uma nova tarefa, ela é salva no `localStorage.setItem("toDos", JSON.stringify(toDos));`.
+- Ao remover ou marcar uma tarefa como concluída, a lista de tarefas é atualizada e salva novamente no LocalStorage.
+- Ao carregar o aplicativo, as tarefas são recuperadas com `localStorage.getItem("toDos")`.
+
+## 📌 Como Rodar o Projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   ```
+
+2. Acesse o diretório do projeto:
+   ```bash
+   cd nome-do-projeto
+   ```
+
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+O aplicativo estará disponível em `http://localhost:5173/` (ou outra porta conforme a configuração do Vite).
+
+## 📜 Licença
+
+Este projeto é de código aberto e pode ser modificado e distribuído livremente.
+
