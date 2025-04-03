@@ -42,12 +42,12 @@ As tarefas são armazenadas no **LocalStorage** do navegador, garantindo que mes
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/GustavoRochaMoreiraDev/to-do-list.git
    ```
 
 2. Acesse o diretório do projeto:
    ```bash
-   cd nome-do-projeto
+   cd to-do-list
    ```
 
 3. Instale as dependências:
