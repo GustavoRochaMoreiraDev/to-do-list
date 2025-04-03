@@ -1,0 +1,144 @@
+body {
+  font-family: Poppins;
+  background-color: #f4f4f4;
+  padding: 30px;
+  color: #333;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto 300px;
+  background-color: #efefef;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+button {
+  background-color: #333994;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: .8;
+  transition: .3s;
+  margin-right: 10px;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.todo-list {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #555;
+}
+
+.to-do {
+  background-color: #FFF;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9534f;
+  padding: 8px 8px;
+}
+
+.todo-form {
+  padding-bottom: 1.5rem;
+}
+
+input,
+select {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.filter {
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.not-found {
+  text-align: center;
+  padding: 20px 0px 20px 0;
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.checkbox>input {
+  margin: 0;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+.content {
+  padding: 0px 10px 0px 10px;
+}
+
+@media (max-width: 500px) {
+  .app {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .to-do {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .to-do .content {
+    word-break: break-word;
+    max-width: 100%;
+  }
+
+  .checkbox {
+    margin-bottom: 5px;
+  }
+
+  .remove {
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+  }
+}
